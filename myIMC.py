@@ -1,7 +1,5 @@
 #PROGRAMA PARA MEDIR O ÍNDICE DE MASSA CORPORAL(IMC)
-peso = input("Insira o Peso: ")
-altura = input("Insira a Altura: ")
-def imc(Peso, Altura):
+def imc(Peso,Altura):
     try:
         Peso = float(Peso)
         Altura = float(Altura)
@@ -14,14 +12,12 @@ def imc(Peso, Altura):
     imc = Peso / Altura**2
 
     if (imc < 18.5):
-        return f"IMC = {imc}, Abaixo do peso"
+        return "Abaixo do peso"
     elif (18.5 <= imc < 25):
-        return  f"IMC = {imc},Peso normal"
+        return "Peso normal"
     elif (25 <= imc < 30):
-        return  f"IMC = {imc},Acima do peso"
+        return "Acima do peso"
     elif (30 <= imc < 40):
-        return  f"IMC = {imc},Acima do Peso(Obesidade)"
-    elif (imc > 40):
-        return  f"IMC = {imc},Acima do peso(Obesiidade grave)"
-
-print(imc(peso, altura))
+        return "Acima do Peso(Obesidade)"
+    elif (imc >= 40):
+        return  "Acima do peso(Obesiidade grave)"

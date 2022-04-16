@@ -61,7 +61,3 @@ class RoteiroTesteFuncional(unittest.TestCase):
     def test_ct15(self):
         res = myIMC.imc("adffd", "abcd")
         self.assertEqual(res, "Entrada inválida. As entradas devem ser numéricas")
-    
-
-if __name__ == "__main__":
-    unittest.main()
